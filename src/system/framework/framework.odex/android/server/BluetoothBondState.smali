@@ -307,99 +307,95 @@
     .local v2, file:Ljava/io/File;
     invoke-virtual {v2}, Ljava/io/File;->exists()Z
     :try_end_c
-    .catchall {:try_start_2 .. :try_end_c} :catchall_96
-    .catch Ljava/io/FileNotFoundException; {:try_start_2 .. :try_end_c} :catch_b2
-    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_c} :catch_70
+    .catchall {:try_start_2 .. :try_end_c} :catchall_92
+    .catch Ljava/io/FileNotFoundException; {:try_start_2 .. :try_end_c} :catch_ae
+    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_c} :catch_6c
 
     move-result v8
 
-    if-eqz v8, :cond_1a
+    if-eqz v8, :cond_16
 
     .line 365
-    if-eqz v3, :cond_14
+    if-eqz v3, :cond_12
 
     :try_start_11
-    #Replaced unresolvable odex instruction with a throw
     throw v3
-    #invoke-virtual-quick {v3}, vtable@0xc
 
     .line 366
-    :cond_14
-    if-eqz v6, :cond_19
+    :cond_12
+    if-eqz v6, :cond_15
 
-    #Replaced unresolvable odex instruction with a throw
     throw v6
-    #invoke-virtual-quick {v6}, vtable@0xc
-    :try_end_19
-    .catch Ljava/io/IOException; {:try_start_11 .. :try_end_19} :catch_b7
+    :try_end_15
+    .catch Ljava/io/IOException; {:try_start_11 .. :try_end_15} :catch_b3
 
     .line 369
     .end local v2           #file:Ljava/io/File;
-    :cond_19
-    :goto_19
+    :cond_15
+    :goto_15
     return-void
 
     .line 351
     .restart local v2       #file:Ljava/io/File;
-    :cond_1a
-    :try_start_1a
+    :cond_16
+    :try_start_16
     new-instance v4, Ljava/io/FileInputStream;
 
     const-string v8, "/etc/bluetooth/auto_pairing.conf"
 
     invoke-direct {v4, v8}, Ljava/io/FileInputStream;-><init>(Ljava/lang/String;)V
-    :try_end_21
-    .catchall {:try_start_1a .. :try_end_21} :catchall_96
-    .catch Ljava/io/FileNotFoundException; {:try_start_1a .. :try_end_21} :catch_b2
-    .catch Ljava/io/IOException; {:try_start_1a .. :try_end_21} :catch_70
+    :try_end_1d
+    .catchall {:try_start_16 .. :try_end_1d} :catchall_92
+    .catch Ljava/io/FileNotFoundException; {:try_start_16 .. :try_end_1d} :catch_ae
+    .catch Ljava/io/IOException; {:try_start_16 .. :try_end_1d} :catch_6c
 
     .line 352
     .end local v3           #in:Ljava/io/FileInputStream;
     .local v4, in:Ljava/io/FileInputStream;
-    :try_start_21
+    :try_start_1d
     new-instance v7, Ljava/io/FileOutputStream;
 
     const-string v8, "/data/misc/bluetooth/dynamic_auto_pairing.conf"
 
     invoke-direct {v7, v8}, Ljava/io/FileOutputStream;-><init>(Ljava/lang/String;)V
-    :try_end_28
-    .catchall {:try_start_21 .. :try_end_28} :catchall_a4
-    .catch Ljava/io/FileNotFoundException; {:try_start_21 .. :try_end_28} :catch_b4
-    .catch Ljava/io/IOException; {:try_start_21 .. :try_end_28} :catch_ab
+    :try_end_24
+    .catchall {:try_start_1d .. :try_end_24} :catchall_a0
+    .catch Ljava/io/FileNotFoundException; {:try_start_1d .. :try_end_24} :catch_b0
+    .catch Ljava/io/IOException; {:try_start_1d .. :try_end_24} :catch_a7
 
     .line 354
     .end local v6           #out:Ljava/io/FileOutputStream;
     .local v7, out:Ljava/io/FileOutputStream;
     const/16 v8, 0x400
 
-    :try_start_2a
+    :try_start_26
     new-array v0, v8, [B
 
     .line 356
     .local v0, buf:[B
-    :goto_2c
+    :goto_28
     invoke-virtual {v4, v0}, Ljava/io/FileInputStream;->read([B)I
 
     move-result v5
 
     .local v5, len:I
-    if-lez v5, :cond_5f
+    if-lez v5, :cond_5b
 
     .line 357
     const/4 v8, 0x0
 
     invoke-virtual {v7, v0, v8, v5}, Ljava/io/FileOutputStream;->write([BII)V
-    :try_end_36
-    .catchall {:try_start_2a .. :try_end_36} :catchall_a7
-    .catch Ljava/io/FileNotFoundException; {:try_start_2a .. :try_end_36} :catch_37
-    .catch Ljava/io/IOException; {:try_start_2a .. :try_end_36} :catch_ae
+    :try_end_32
+    .catchall {:try_start_26 .. :try_end_32} :catchall_a3
+    .catch Ljava/io/FileNotFoundException; {:try_start_26 .. :try_end_32} :catch_33
+    .catch Ljava/io/IOException; {:try_start_26 .. :try_end_32} :catch_aa
 
-    goto :goto_2c
+    goto :goto_28
 
     .line 359
     .end local v0           #buf:[B
     .end local v5           #len:I
-    :catch_37
+    :catch_33
     move-exception v1
 
     move-object v6, v7
@@ -413,8 +409,8 @@
     .end local v4           #in:Ljava/io/FileInputStream;
     .local v1, e:Ljava/io/FileNotFoundException;
     .restart local v3       #in:Ljava/io/FileInputStream;
-    :goto_3a
-    :try_start_3a
+    :goto_36
+    :try_start_36
     const-string v8, "BluetoothBondState"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -436,30 +432,30 @@
     move-result-object v9
 
     invoke-static {v8, v9}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-    :try_end_52
-    .catchall {:try_start_3a .. :try_end_52} :catchall_96
+    :try_end_4e
+    .catchall {:try_start_36 .. :try_end_4e} :catchall_92
 
     .line 365
-    if-eqz v3, :cond_57
+    if-eqz v3, :cond_53
 
-    :try_start_54
+    :try_start_50
     invoke-virtual {v3}, Ljava/io/FileInputStream;->close()V
 
     .line 366
-    :cond_57
-    if-eqz v6, :cond_19
+    :cond_53
+    if-eqz v6, :cond_15
 
     invoke-virtual {v6}, Ljava/io/FileOutputStream;->close()V
-    :try_end_5c
-    .catch Ljava/io/IOException; {:try_start_54 .. :try_end_5c} :catch_5d
+    :try_end_58
+    .catch Ljava/io/IOException; {:try_start_50 .. :try_end_58} :catch_59
 
-    goto :goto_19
+    goto :goto_15
 
     .line 367
-    :catch_5d
+    :catch_59
     move-exception v8
 
-    goto :goto_19
+    goto :goto_15
 
     .line 365
     .end local v1           #e:Ljava/io/FileNotFoundException;
@@ -470,21 +466,21 @@
     .restart local v4       #in:Ljava/io/FileInputStream;
     .restart local v5       #len:I
     .restart local v7       #out:Ljava/io/FileOutputStream;
-    :cond_5f
-    if-eqz v4, :cond_64
+    :cond_5b
+    if-eqz v4, :cond_60
 
-    :try_start_61
+    :try_start_5d
     invoke-virtual {v4}, Ljava/io/FileInputStream;->close()V
 
     .line 366
-    :cond_64
-    if-eqz v7, :cond_69
+    :cond_60
+    if-eqz v7, :cond_65
 
     invoke-virtual {v7}, Ljava/io/FileOutputStream;->close()V
-    :try_end_69
-    .catch Ljava/io/IOException; {:try_start_61 .. :try_end_69} :catch_6c
+    :try_end_65
+    .catch Ljava/io/IOException; {:try_start_5d .. :try_end_65} :catch_68
 
-    :cond_69
+    :cond_65
     move-object v6, v7
 
     .end local v7           #out:Ljava/io/FileOutputStream;
@@ -494,13 +490,13 @@
     .line 367
     .end local v4           #in:Ljava/io/FileInputStream;
     .restart local v3       #in:Ljava/io/FileInputStream;
-    goto :goto_19
+    goto :goto_15
 
     .end local v3           #in:Ljava/io/FileInputStream;
     .end local v6           #out:Ljava/io/FileOutputStream;
     .restart local v4       #in:Ljava/io/FileInputStream;
     .restart local v7       #out:Ljava/io/FileOutputStream;
-    :catch_6c
+    :catch_68
     move-exception v8
 
     move-object v6, v7
@@ -512,19 +508,19 @@
     .line 368
     .end local v4           #in:Ljava/io/FileInputStream;
     .restart local v3       #in:Ljava/io/FileInputStream;
-    goto :goto_19
+    goto :goto_15
 
     .line 361
     .end local v0           #buf:[B
     .end local v2           #file:Ljava/io/File;
     .end local v5           #len:I
-    :catch_70
+    :catch_6c
     move-exception v1
 
     .line 362
     .local v1, e:Ljava/io/IOException;
-    :goto_71
-    :try_start_71
+    :goto_6d
+    :try_start_6d
     const-string v8, "BluetoothBondState"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -546,79 +542,79 @@
     move-result-object v9
 
     invoke-static {v8, v9}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-    :try_end_89
-    .catchall {:try_start_71 .. :try_end_89} :catchall_96
+    :try_end_85
+    .catchall {:try_start_6d .. :try_end_85} :catchall_92
 
     .line 365
-    if-eqz v3, :cond_8e
+    if-eqz v3, :cond_8a
 
-    :try_start_8b
+    :try_start_87
     invoke-virtual {v3}, Ljava/io/FileInputStream;->close()V
 
     .line 366
-    :cond_8e
-    if-eqz v6, :cond_19
+    :cond_8a
+    if-eqz v6, :cond_15
 
     invoke-virtual {v6}, Ljava/io/FileOutputStream;->close()V
-    :try_end_93
-    .catch Ljava/io/IOException; {:try_start_8b .. :try_end_93} :catch_94
+    :try_end_8f
+    .catch Ljava/io/IOException; {:try_start_87 .. :try_end_8f} :catch_90
 
-    goto :goto_19
+    goto :goto_15
 
     .line 367
-    :catch_94
+    :catch_90
     move-exception v8
 
-    goto :goto_19
+    goto :goto_15
 
     .line 364
     .end local v1           #e:Ljava/io/IOException;
-    :catchall_96
+    :catchall_92
     move-exception v8
 
     .line 365
-    :goto_97
-    if-eqz v3, :cond_9c
+    :goto_93
+    if-eqz v3, :cond_98
 
-    :try_start_99
+    :try_start_95
     invoke-virtual {v3}, Ljava/io/FileInputStream;->close()V
 
     .line 366
-    :cond_9c
-    if-eqz v6, :cond_a1
+    :cond_98
+    if-eqz v6, :cond_9d
 
     invoke-virtual {v6}, Ljava/io/FileOutputStream;->close()V
-    :try_end_a1
-    .catch Ljava/io/IOException; {:try_start_99 .. :try_end_a1} :catch_a2
+    :try_end_9d
+    .catch Ljava/io/IOException; {:try_start_95 .. :try_end_9d} :catch_9e
 
     .line 367
-    :cond_a1
-    :goto_a1
+    :cond_9d
+    :goto_9d
     throw v8
 
-    :catch_a2
+    :catch_9e
     move-exception v9
 
-    goto :goto_a1
+    goto :goto_9d
 
     .line 364
     .end local v3           #in:Ljava/io/FileInputStream;
     .restart local v2       #file:Ljava/io/File;
     .restart local v4       #in:Ljava/io/FileInputStream;
-    :catchall_a4
+    :catchall_a0
     move-exception v8
 
     move-object v3, v4
 
     .end local v4           #in:Ljava/io/FileInputStream;
     .restart local v3       #in:Ljava/io/FileInputStream;
-    goto :goto_97
+    goto :goto_93
 
     .end local v3           #in:Ljava/io/FileInputStream;
     .end local v6           #out:Ljava/io/FileOutputStream;
     .restart local v4       #in:Ljava/io/FileInputStream;
     .restart local v7       #out:Ljava/io/FileOutputStream;
-    :catchall_a7
+    :catchall_a3
     move-exception v8
 
     move-object v6, v7
@@ -629,25 +625,25 @@
 
     .end local v4           #in:Ljava/io/FileInputStream;
     .restart local v3       #in:Ljava/io/FileInputStream;
-    goto :goto_97
+    goto :goto_93
 
     .line 361
     .end local v3           #in:Ljava/io/FileInputStream;
     .restart local v4       #in:Ljava/io/FileInputStream;
-    :catch_ab
+    :catch_a7
     move-exception v1
 
     move-object v3, v4
 
     .end local v4           #in:Ljava/io/FileInputStream;
     .restart local v3       #in:Ljava/io/FileInputStream;
-    goto :goto_71
+    goto :goto_6d
 
     .end local v3           #in:Ljava/io/FileInputStream;
     .end local v6           #out:Ljava/io/FileOutputStream;
     .restart local v4       #in:Ljava/io/FileInputStream;
     .restart local v7       #out:Ljava/io/FileOutputStream;
-    :catch_ae
+    :catch_aa
     move-exception v1
 
     move-object v6, v7
@@ -658,32 +654,32 @@
 
     .end local v4           #in:Ljava/io/FileInputStream;
     .restart local v3       #in:Ljava/io/FileInputStream;
-    goto :goto_71
+    goto :goto_6d
 
     .line 359
     .end local v2           #file:Ljava/io/File;
-    :catch_b2
+    :catch_ae
     move-exception v1
 
-    goto :goto_3a
+    goto :goto_36
 
     .end local v3           #in:Ljava/io/FileInputStream;
     .restart local v2       #file:Ljava/io/File;
     .restart local v4       #in:Ljava/io/FileInputStream;
-    :catch_b4
+    :catch_b0
     move-exception v1
 
     move-object v3, v4
 
     .end local v4           #in:Ljava/io/FileInputStream;
     .restart local v3       #in:Ljava/io/FileInputStream;
-    goto :goto_3a
+    goto :goto_36
 
     .line 367
-    :catch_b7
+    :catch_b3
     move-exception v8
 
-    goto/16 :goto_19
+    goto/16 :goto_15
 .end method
 
 .method private getProfileProxy()V

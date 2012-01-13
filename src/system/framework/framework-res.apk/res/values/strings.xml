@@ -1250,4 +1250,12 @@ for account %s"</string>
     <string name="sending">Sending...</string>
     <string name="launchBrowserDefault">Launch Browser?</string>
     <string name="SetupCallDefault">Accept Call?</string>
+    <string name="reboot_system">Reboot phone</string>
+    <string name="reboot_reboot">Reboot</string>
+    <string name="reboot_recovery">Recovery</string>
+    <string name="reboot_bootloader">Bootloader</string>
+    <string name="reboot_progress">Rebooting…</string>
+    <string name="reboot_confirm">Your phone will reboot.</string>
+    <string name="global_action_reboot">Reboot</string>
+    <string name="app_killed_message">Application killed</string>
 </resources>

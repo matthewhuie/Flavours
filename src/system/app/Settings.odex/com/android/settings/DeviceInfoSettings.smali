@@ -545,7 +545,14 @@
 
     invoke-direct {p0, v3, v4}, Lcom/android/settings/DeviceInfoSettings;->setValueSummary(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 74
+    .line 75
+    const-string v3, "flavours_version"
+
+    const-string v4, "ro.flavours.version"
+
+    invoke-direct {p0, v3, v4}, Lcom/android/settings/DeviceInfoSettings;->setValueSummary(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 76
     const-string v3, "device_model"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -572,14 +579,14 @@
 
     invoke-direct {p0, v3, v4}, Lcom/android/settings/DeviceInfoSettings;->setStringSummary(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 75
+    .line 77
     const-string v3, "build_number"
 
     sget-object v4, Landroid/os/Build;->DISPLAY:Ljava/lang/String;
 
     invoke-direct {p0, v3, v4}, Lcom/android/settings/DeviceInfoSettings;->setStringSummary(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 76
+    .line 78
     const-string v3, "kernel_version"
 
     invoke-virtual {p0, v3}, Lcom/android/settings/DeviceInfoSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
@@ -612,7 +619,7 @@
 
     move-result v3
 
-    if-eqz v3, :cond_73
+    if-eqz v3, :cond_7a
 
     .line 84
     invoke-virtual {p0}, Lcom/android/settings/DeviceInfoSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
@@ -628,7 +635,7 @@
     invoke-virtual {v3, v4}, Landroid/preference/PreferenceScreen;->removePreference(Landroid/preference/Preference;)Z
 
     .line 91
-    :cond_73
+    :cond_7a
     invoke-virtual {p0}, Lcom/android/settings/DeviceInfoSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
@@ -692,7 +699,7 @@
 
     .line 114
     .local v1, isUpdateSettingAvailable:Z
-    if-nez v1, :cond_bb
+    if-nez v1, :cond_c2
 
     .line 115
     invoke-virtual {p0}, Lcom/android/settings/DeviceInfoSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
@@ -708,7 +715,7 @@
     invoke-virtual {v3, v4}, Landroid/preference/PreferenceScreen;->removePreference(Landroid/preference/Preference;)Z
 
     .line 117
-    :cond_bb
+    :cond_c2
     return-void
 .end method
 

@@ -19,10 +19,6 @@
 
 # virtual methods
 .method public abstract apply(Ljava/lang/Object;)Z
-    .parameter
-        .annotation runtime Ljavax/annotation/Nullable;
-        .end annotation
-    .end parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;)Z"

@@ -2434,6 +2434,10 @@
     <public type="string" name="APKTOOL_DUMMY_05e5" id="0x7f0b05e5" />
     <public type="string" name="APKTOOL_DUMMY_05e6" id="0x7f0b05e6" />
     <public type="string" name="APKTOOL_DUMMY_05e7" id="0x7f0b05e7" />
+    <public type="string" name="flavour_version" id="0x7f0b05e8" />
+    <public type="string" name="flavour_version_default" id="0x7f0b05e9" />
+    <public type="string" name="kill_app_longpress_back" id="0x7f0b05ea" />
+    <public type="string" name="kill_app_longpress_back_summary" id="0x7f0b05eb" />
     <public type="dimen" name="device_memory_usage_button_width" id="0x7f0c0000" />
     <public type="dimen" name="device_memory_usage_button_height" id="0x7f0c0001" />
     <public type="dimen" name="action_bar_switch_padding" id="0x7f0c0002" />

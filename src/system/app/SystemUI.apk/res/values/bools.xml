@@ -2,7 +2,7 @@
 <resources>
     <bool name="config_recents_interface_for_tablets">false</bool>
     <bool name="config_recents_thumbnail_image_fits_to_xy">false</bool>
-    <bool name="config_hspa_data_distinguishable">false</bool>
+    <bool name="config_hspa_data_distinguishable">true</bool>
     <bool name="config_statusBarShowNumber">false</bool>
     <bool name="config_showPhoneRSSIForData">false</bool>
     <bool name="config_showMin3G">false</bool>

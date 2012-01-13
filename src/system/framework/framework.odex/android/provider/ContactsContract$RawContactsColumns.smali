@@ -25,6 +25,8 @@
 
 .field public static final DELETED:Ljava/lang/String; = "deleted"
 
+.field public static final IS_RESTRICTED:Ljava/lang/String; = "is_restricted"
+
 .field public static final NAME_VERIFIED:Ljava/lang/String; = "name_verified"
 
 .field public static final RAW_CONTACT_IS_READ_ONLY:Ljava/lang/String; = "raw_contact_is_read_only"

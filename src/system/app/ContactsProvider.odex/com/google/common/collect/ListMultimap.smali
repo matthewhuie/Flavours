@@ -26,10 +26,6 @@
 
 # virtual methods
 .method public abstract get(Ljava/lang/Object;)Ljava/util/List;
-    .parameter
-        .annotation runtime Ljavax/annotation/Nullable;
-        .end annotation
-    .end parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TK;)",

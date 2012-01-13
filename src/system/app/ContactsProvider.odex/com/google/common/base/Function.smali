@@ -21,10 +21,6 @@
 
 # virtual methods
 .method public abstract apply(Ljava/lang/Object;)Ljava/lang/Object;
-    .parameter
-        .annotation runtime Ljavax/annotation/Nullable;
-        .end annotation
-    .end parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TF;)TT;"

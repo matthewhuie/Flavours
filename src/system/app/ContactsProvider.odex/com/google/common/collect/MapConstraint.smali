@@ -21,14 +21,6 @@
 
 # virtual methods
 .method public abstract checkKeyValue(Ljava/lang/Object;Ljava/lang/Object;)V
-    .parameter
-        .annotation runtime Ljavax/annotation/Nullable;
-        .end annotation
-    .end parameter
-    .parameter
-        .annotation runtime Ljavax/annotation/Nullable;
-        .end annotation
-    .end parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TK;TV;)V"

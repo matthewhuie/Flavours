@@ -15,4 +15,5 @@
     <public type="string" name="read_write_all_voicemail_label" id="0x7f040009" />
     <public type="string" name="read_write_all_voicemail_description" id="0x7f04000a" />
     <public type="string" name="voicemail_from_column" id="0x7f04000b" />
+    <public type="array" name="unrestricted_packages" id="0x7f050000" />
 </resources>

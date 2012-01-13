@@ -1,4 +1,4 @@
-.class final Lcom/android/internal/app/ShutdownThread$2;
+.class final Lcom/android/internal/app/ShutdownThread$5;
 .super Ljava/lang/Object;
 .source "ShutdownThread.java"
 
@@ -27,8 +27,8 @@
     .parameter
 
     .prologue
-    .line 125
-    iput-object p1, p0, Lcom/android/internal/app/ShutdownThread$2;->val$context:Landroid/content/Context;
+    .line 152
+    iput-object p1, p0, Lcom/android/internal/app/ShutdownThread$5;->val$context:Landroid/content/Context;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,16 +43,11 @@
     .parameter "which"
 
     .prologue
-    .line 127
-    const/4 v0, 0x1
-
-    invoke-static {v0}, Lcom/android/internal/app/ShutdownThread;->access$002(Z)Z
-
-    .line 128
-    iget-object v0, p0, Lcom/android/internal/app/ShutdownThread$2;->val$context:Landroid/content/Context;
+    .line 154
+    iget-object v0, p0, Lcom/android/internal/app/ShutdownThread$5;->val$context:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/android/internal/app/ShutdownThread;->access$100(Landroid/content/Context;)V
 
-    .line 129
+    .line 155
     return-void
 .end method

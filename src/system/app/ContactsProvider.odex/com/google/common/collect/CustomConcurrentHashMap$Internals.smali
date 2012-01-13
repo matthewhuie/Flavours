@@ -37,12 +37,6 @@
 .end method
 
 .method public abstract removeEntry(Ljava/lang/Object;Ljava/lang/Object;)Z
-    .parameter
-    .end parameter
-    .parameter
-        .annotation runtime Ljavax/annotation/Nullable;
-        .end annotation
-    .end parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TE;TV;)Z"

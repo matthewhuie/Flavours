@@ -2585,7 +2585,7 @@
 
     const/4 v9, 0x1
 
-    if-eq v8, v9, :cond_f5
+    if-eq v8, v9, :cond_f3
 
     .line 752
     new-instance v8, Lcom/google/android/mms/MmsException;
@@ -2618,7 +2618,7 @@
     :try_end_5d
     .catchall {:try_start_2 .. :try_end_5d} :catchall_6b
     .catch Ljava/io/FileNotFoundException; {:try_start_2 .. :try_end_5d} :catch_5d
-    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_5d} :catch_e4
+    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_5d} :catch_e2
 
     .line 779
     .end local v1           #cv:Landroid/content/ContentValues;
@@ -2655,7 +2655,7 @@
     :try_start_6e
     invoke-virtual {v7}, Ljava/io/OutputStream;->close()V
     :try_end_71
-    .catch Ljava/io/IOException; {:try_start_6e .. :try_end_71} :catch_135
+    .catch Ljava/io/IOException; {:try_start_6e .. :try_end_71} :catch_133
 
     .line 793
     :cond_71
@@ -2666,7 +2666,7 @@
     :try_start_73
     invoke-virtual {v5}, Ljava/io/InputStream;->close()V
     :try_end_76
-    .catch Ljava/io/IOException; {:try_start_73 .. :try_end_76} :catch_150
+    .catch Ljava/io/IOException; {:try_start_73 .. :try_end_76} :catch_14e
 
     .line 798
     :cond_76
@@ -2684,7 +2684,7 @@
     move-result-object v7
 
     .line 756
-    if-nez v2, :cond_f2
+    if-nez v2, :cond_f0
 
     .line 757
     invoke-virtual {p1}, Lcom/google/android/mms/pdu/PduPart;->getDataUri()Landroid/net/Uri;
@@ -2695,7 +2695,7 @@
     .local v3, dataUri:Landroid/net/Uri;
     if-eqz v3, :cond_87
 
-    if-ne v3, p2, :cond_cd
+    if-ne v3, p2, :cond_cb
 
     .line 759
     :cond_87
@@ -2707,7 +2707,7 @@
     :try_end_8e
     .catchall {:try_start_77 .. :try_end_8e} :catchall_6b
     .catch Ljava/io/FileNotFoundException; {:try_start_77 .. :try_end_8e} :catch_5d
-    .catch Ljava/io/IOException; {:try_start_77 .. :try_end_8e} :catch_e4
+    .catch Ljava/io/IOException; {:try_start_77 .. :try_end_8e} :catch_e2
 
     .line 786
     if-eqz v7, :cond_93
@@ -2716,30 +2716,28 @@
     :try_start_90
     invoke-virtual {v7}, Ljava/io/OutputStream;->close()V
     :try_end_93
-    .catch Ljava/io/IOException; {:try_start_90 .. :try_end_93} :catch_99
+    .catch Ljava/io/IOException; {:try_start_90 .. :try_end_93} :catch_97
 
     .line 793
     :cond_93
     :goto_93
-    if-eqz v5, :cond_98
+    if-eqz v5, :cond_96
 
     .line 795
     :try_start_95
-    #Replaced unresolvable odex instruction with a throw
     throw v5
-    #invoke-virtual-quick {v5}, vtable@0xc
-    :try_end_98
-    .catch Ljava/io/IOException; {:try_start_95 .. :try_end_98} :catch_b3
+    :try_end_96
+    .catch Ljava/io/IOException; {:try_start_95 .. :try_end_96} :catch_b1
 
     .line 801
     .end local v3           #dataUri:Landroid/net/Uri;
-    :cond_98
-    :goto_98
+    :cond_96
+    :goto_96
     return-void
 
     .line 789
     .restart local v3       #dataUri:Landroid/net/Uri;
-    :catch_99
+    :catch_97
     move-exception v4
 
     .line 790
@@ -2770,7 +2768,7 @@
 
     .line 796
     .end local v4           #e:Ljava/io/IOException;
-    :catch_b3
+    :catch_b1
     move-exception v4
 
     .line 797
@@ -2797,12 +2795,12 @@
 
     invoke-static {v8, v9, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    goto :goto_98
+    goto :goto_96
 
     .line 762
     .end local v4           #e:Ljava/io/IOException;
-    :cond_cd
-    :try_start_cd
+    :cond_cb
+    :try_start_cb
     iget-object v8, p0, Lcom/google/android/mms/pdu/PduPersister;->mContentResolver:Landroid/content/ContentResolver;
 
     invoke-virtual {v8, v3}, Landroid/content/ContentResolver;->openInputStream(Landroid/net/Uri;)Ljava/io/InputStream;
@@ -2819,37 +2817,37 @@
     const/4 v6, 0x0
 
     .local v6, len:I
-    :goto_d8
+    :goto_d6
     invoke-virtual {v5, v0}, Ljava/io/InputStream;->read([B)I
 
     move-result v6
 
     const/4 v8, -0x1
 
-    if-eq v6, v8, :cond_f5
+    if-eq v6, v8, :cond_f3
 
     .line 770
     const/4 v8, 0x0
 
     invoke-virtual {v7, v0, v8, v6}, Ljava/io/OutputStream;->write([BII)V
-    :try_end_e3
-    .catchall {:try_start_cd .. :try_end_e3} :catchall_6b
-    .catch Ljava/io/FileNotFoundException; {:try_start_cd .. :try_end_e3} :catch_5d
-    .catch Ljava/io/IOException; {:try_start_cd .. :try_end_e3} :catch_e4
+    :try_end_e1
+    .catchall {:try_start_cb .. :try_end_e1} :catchall_6b
+    .catch Ljava/io/FileNotFoundException; {:try_start_cb .. :try_end_e1} :catch_5d
+    .catch Ljava/io/IOException; {:try_start_cb .. :try_end_e1} :catch_e2
 
-    goto :goto_d8
+    goto :goto_d6
 
     .line 782
     .end local v0           #buffer:[B
     .end local v2           #data:[B
     .end local v3           #dataUri:Landroid/net/Uri;
     .end local v6           #len:I
-    :catch_e4
+    :catch_e2
     move-exception v4
 
     .line 783
     .restart local v4       #e:Ljava/io/IOException;
-    :try_start_e5
+    :try_start_e3
     const-string v8, "PduPersister"
 
     const-string v9, "Failed to read/write data."
@@ -2862,45 +2860,45 @@
     invoke-direct {v8, v4}, Lcom/google/android/mms/MmsException;-><init>(Ljava/lang/Throwable;)V
 
     throw v8
-    :try_end_f2
-    .catchall {:try_start_e5 .. :try_end_f2} :catchall_6b
+    :try_end_f0
+    .catchall {:try_start_e3 .. :try_end_f0} :catchall_6b
 
     .line 776
     .end local v4           #e:Ljava/io/IOException;
     .restart local v2       #data:[B
-    :cond_f2
-    :try_start_f2
+    :cond_f0
+    :try_start_f0
     invoke-virtual {v7, v2}, Ljava/io/OutputStream;->write([B)V
-    :try_end_f5
-    .catchall {:try_start_f2 .. :try_end_f5} :catchall_6b
-    .catch Ljava/io/FileNotFoundException; {:try_start_f2 .. :try_end_f5} :catch_5d
-    .catch Ljava/io/IOException; {:try_start_f2 .. :try_end_f5} :catch_e4
+    :try_end_f3
+    .catchall {:try_start_f0 .. :try_end_f3} :catchall_6b
+    .catch Ljava/io/FileNotFoundException; {:try_start_f0 .. :try_end_f3} :catch_5d
+    .catch Ljava/io/IOException; {:try_start_f0 .. :try_end_f3} :catch_e2
 
     .line 786
-    :cond_f5
-    if-eqz v7, :cond_fa
+    :cond_f3
+    if-eqz v7, :cond_f8
 
     .line 788
-    :try_start_f7
+    :try_start_f5
     invoke-virtual {v7}, Ljava/io/OutputStream;->close()V
-    :try_end_fa
-    .catch Ljava/io/IOException; {:try_start_f7 .. :try_end_fa} :catch_11b
+    :try_end_f8
+    .catch Ljava/io/IOException; {:try_start_f5 .. :try_end_f8} :catch_119
 
     .line 793
-    :cond_fa
-    :goto_fa
-    if-eqz v5, :cond_98
+    :cond_f8
+    :goto_f8
+    if-eqz v5, :cond_96
 
     .line 795
-    :try_start_fc
+    :try_start_fa
     invoke-virtual {v5}, Ljava/io/InputStream;->close()V
-    :try_end_ff
-    .catch Ljava/io/IOException; {:try_start_fc .. :try_end_ff} :catch_100
+    :try_end_fd
+    .catch Ljava/io/IOException; {:try_start_fa .. :try_end_fd} :catch_fe
 
-    goto :goto_98
+    goto :goto_96
 
     .line 796
-    :catch_100
+    :catch_fe
     move-exception v4
 
     .line 797
@@ -2927,11 +2925,11 @@
 
     invoke-static {v8, v9, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    goto/16 :goto_98
+    goto/16 :goto_96
 
     .line 789
     .end local v4           #e:Ljava/io/IOException;
-    :catch_11b
+    :catch_119
     move-exception v4
 
     .line 790
@@ -2958,12 +2956,12 @@
 
     invoke-static {v8, v9, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    goto :goto_fa
+    goto :goto_f8
 
     .line 789
     .end local v2           #data:[B
     .end local v4           #e:Ljava/io/IOException;
-    :catch_135
+    :catch_133
     move-exception v4
 
     .line 790
@@ -2994,7 +2992,7 @@
 
     .line 796
     .end local v4           #e:Ljava/io/IOException;
-    :catch_150
+    :catch_14e
     move-exception v4
 
     .line 797

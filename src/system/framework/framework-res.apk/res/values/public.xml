@@ -3888,6 +3888,14 @@
     <public type="string" name="sending" id="0x010404c8" />
     <public type="string" name="launchBrowserDefault" id="0x010404c9" />
     <public type="string" name="SetupCallDefault" id="0x010404ca" />
+    <public type="string" name="reboot_system" id="0x010404cb" />
+    <public type="string" name="reboot_reboot" id="0x010404cc" />
+    <public type="string" name="reboot_recovery" id="0x010404cd" />
+    <public type="string" name="reboot_bootloader" id="0x010404ce" />
+    <public type="string" name="reboot_progress" id="0x010404cf" />
+    <public type="string" name="reboot_confirm" id="0x010404d0" />
+    <public type="string" name="global_action_reboot" id="0x010404d1" />
+    <public type="string" name="app_killed_message" id="0x010404d2" />
     <public type="dimen" name="app_icon_size" id="0x01050000" />
     <public type="dimen" name="thumbnail_height" id="0x01050001" />
     <public type="dimen" name="thumbnail_width" id="0x01050002" />
@@ -3962,9 +3970,9 @@
     <public type="dimen" name="default_app_widget_padding_right" id="0x01050047" />
     <public type="dimen" name="default_app_widget_padding_bottom" id="0x01050048" />
     <public type="dimen" name="action_button_min_width" id="0x01050049" />
+    <public type="dimen" name="APKTOOL_DUMMY_004a" id="0x0105004a" />
     <public type="dimen" name="keyguard_pattern_unlock_clock_font_size" id="0x0105004b" />
     <public type="dimen" name="keyguard_pattern_unlock_status_line_font_size" id="0x0105004c" />
-    <public type="dimen" name="APKTOOL_DUMMY_004a" id="0x0105004a" />
     <public type="color" name="darker_gray" id="0x01060000" />
     <public type="color" name="primary_text_dark" id="0x01060001" />
     <public type="color" name="primary_text_dark_nodisable" id="0x01060002" />
@@ -4132,6 +4140,8 @@
     <public type="array" name="common_nicknames" id="0x0107002c" />
     <public type="array" name="imAddressTypes" id="0x0107002d" />
     <public type="array" name="carrier_properties" id="0x0107002e" />
+    <public type="array" name="shutdown_reboot_options" id="0x0107002f" />
+    <public type="array" name="shutdown_reboot_actions" id="0x01070030" />
     <public type="drawable" name="background_holo_dark" id="0x010800c9" />
     <public type="drawable" name="background_holo_light" id="0x010800ca" />
     <public type="drawable" name="blank_tile" id="0x010800cc" />
@@ -4245,6 +4255,7 @@
     <public type="drawable" name="ic_btn_square_browser_zoom_page_overview" id="0x010802a5" />
     <public type="drawable" name="ic_clear" id="0x010802ad" />
     <public type="drawable" name="ic_clear_holo_light" id="0x010802af" />
+    <public type="drawable" name="APKTOOL_DUMMY_02b3" id="0x010802b3" />
     <public type="drawable" name="ic_lockscreen_answer" id="0x010802d3" />
     <public type="drawable" name="ic_lockscreen_camera" id="0x010802d7" />
     <public type="drawable" name="ic_lockscreen_decline" id="0x010802de" />
@@ -4361,6 +4372,7 @@
     <public type="drawable" name="switch_inner_holo_light" id="0x0108054e" />
     <public type="drawable" name="switch_track_holo_dark" id="0x01080557" />
     <public type="drawable" name="switch_track_holo_light" id="0x01080558" />
+    <public type="drawable" name="APKTOOL_DUMMY_055d" id="0x0108055d" />
     <public type="drawable" name="tab_bottom_left" id="0x01080575" />
     <public type="drawable" name="tab_bottom_left_v4" id="0x01080576" />
     <public type="drawable" name="tab_bottom_right" id="0x01080577" />
@@ -5633,13 +5645,12 @@
     <public type="drawable" name="usb_android_connected" id="0x010805d8" />
     <public type="drawable" name="vpn_connected" id="0x010805d9" />
     <public type="drawable" name="vpn_disconnected" id="0x010805da" />
+    <public type="drawable" name="ic_lock_reboot" id="0x010805e4" />
     <public type="drawable" name="unlock_default" id="0x010805d3" />
     <public type="drawable" name="unlock_halo" id="0x010805d4" />
     <public type="drawable" name="unlock_ring" id="0x010805d5" />
     <public type="drawable" name="unlock_wave" id="0x010805d6" />
     <public type="drawable" name="btn_lock_normal" id="0x01080168" />
-    <public type="drawable" name="APKTOOL_DUMMY_02b3" id="0x010802b3" />
-    <public type="drawable" name="APKTOOL_DUMMY_055d" id="0x0108055d" />
     <public type="layout" name="activity_list_item" id="0x01090000" />
     <public type="layout" name="expandable_list_content" id="0x01090001" />
     <public type="layout" name="preference_category" id="0x01090002" />

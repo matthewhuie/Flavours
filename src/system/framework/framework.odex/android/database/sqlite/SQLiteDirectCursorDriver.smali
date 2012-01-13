@@ -108,12 +108,12 @@
 
     invoke-direct {v1, v2, v3, v4, p2}, Landroid/database/sqlite/SQLiteQuery;-><init>(Landroid/database/sqlite/SQLiteDatabase;Ljava/lang/String;I[Ljava/lang/String;)V
     :try_end_17
-    .catchall {:try_start_1 .. :try_end_17} :catchall_4a
+    .catchall {:try_start_1 .. :try_end_17} :catchall_48
 
     .line 50
     .end local v0           #query:Landroid/database/sqlite/SQLiteQuery;
     .local v1, query:Landroid/database/sqlite/SQLiteQuery;
-    if-nez p1, :cond_32
+    if-nez p1, :cond_30
 
     .line 51
     :try_start_19
@@ -129,7 +129,7 @@
     :goto_22
     iput-object v1, p0, Landroid/database/sqlite/SQLiteDirectCursorDriver;->mQuery:Landroid/database/sqlite/SQLiteQuery;
     :try_end_24
-    .catchall {:try_start_19 .. :try_end_24} :catchall_3d
+    .catchall {:try_start_19 .. :try_end_24} :catchall_3b
 
     .line 57
     const/4 v0, 0x0
@@ -140,17 +140,15 @@
     :try_start_25
     iget-object v2, p0, Landroid/database/sqlite/SQLiteDirectCursorDriver;->mCursor:Landroid/database/Cursor;
     :try_end_27
-    .catchall {:try_start_25 .. :try_end_27} :catchall_4a
+    .catchall {:try_start_25 .. :try_end_27} :catchall_48
 
     .line 61
-    if-eqz v0, :cond_2c
+    if-eqz v0, :cond_2a
 
-    #Replaced unresolvable odex instruction with a throw
     throw v0
-    #invoke-virtual-quick {v0}, vtable@0x17
 
     .line 62
-    :cond_2c
+    :cond_2a
     iget-object v3, p0, Landroid/database/sqlite/SQLiteDirectCursorDriver;->mDatabase:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v3}, Landroid/database/sqlite/SQLiteDatabase;->unlock()V
@@ -160,8 +158,8 @@
     .line 53
     .end local v0           #query:Landroid/database/sqlite/SQLiteQuery;
     .restart local v1       #query:Landroid/database/sqlite/SQLiteQuery;
-    :cond_32
-    :try_start_32
+    :cond_30
+    :try_start_30
     iget-object v2, p0, Landroid/database/sqlite/SQLiteDirectCursorDriver;->mDatabase:Landroid/database/sqlite/SQLiteDatabase;
 
     iget-object v3, p0, Landroid/database/sqlite/SQLiteDirectCursorDriver;->mEditTable:Ljava/lang/String;
@@ -171,26 +169,26 @@
     move-result-object v2
 
     iput-object v2, p0, Landroid/database/sqlite/SQLiteDirectCursorDriver;->mCursor:Landroid/database/Cursor;
-    :try_end_3c
-    .catchall {:try_start_32 .. :try_end_3c} :catchall_3d
+    :try_end_3a
+    .catchall {:try_start_30 .. :try_end_3a} :catchall_3b
 
     goto :goto_22
 
     .line 61
-    :catchall_3d
+    :catchall_3b
     move-exception v2
 
     move-object v0, v1
 
     .end local v1           #query:Landroid/database/sqlite/SQLiteQuery;
     .restart local v0       #query:Landroid/database/sqlite/SQLiteQuery;
-    :goto_3f
-    if-eqz v0, :cond_44
+    :goto_3d
+    if-eqz v0, :cond_42
 
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteQuery;->close()V
 
     .line 62
-    :cond_44
+    :cond_42
     iget-object v3, p0, Landroid/database/sqlite/SQLiteDirectCursorDriver;->mDatabase:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v3}, Landroid/database/sqlite/SQLiteDatabase;->unlock()V
@@ -198,10 +196,10 @@
     throw v2
 
     .line 61
-    :catchall_4a
+    :catchall_48
     move-exception v2
 
-    goto :goto_3f
+    goto :goto_3d
 .end method
 
 .method public setBindArguments([Ljava/lang/String;)V

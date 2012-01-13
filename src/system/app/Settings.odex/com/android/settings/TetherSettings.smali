@@ -1987,7 +1987,7 @@
     const/4 v12, 0x1
 
     .line 207
-    if-ne p1, v12, :cond_f7
+    if-ne p1, v12, :cond_f3
 
     .line 208
     invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
@@ -2066,7 +2066,7 @@
     :try_start_42
     invoke-virtual {v1, v6}, Landroid/content/res/AssetManager;->open(Ljava/lang/String;)Ljava/io/InputStream;
     :try_end_45
-    .catchall {:try_start_42 .. :try_end_45} :catchall_d1
+    .catchall {:try_start_42 .. :try_end_45} :catchall_cf
     .catch Ljava/lang/Exception; {:try_start_42 .. :try_end_45} :catch_c5
 
     move-result-object v3
@@ -2078,7 +2078,7 @@
     :try_start_48
     invoke-virtual {v3}, Ljava/io/InputStream;->close()V
     :try_end_4b
-    .catch Ljava/lang/Exception; {:try_start_48 .. :try_end_4b} :catch_10c
+    .catch Ljava/lang/Exception; {:try_start_48 .. :try_end_4b} :catch_108
 
     .line 227
     :cond_4b
@@ -2103,7 +2103,7 @@
     .local v7, url:Ljava/lang/String;
     const-string v10, "%z"
 
-    if-eqz v8, :cond_d8
+    if-eqz v8, :cond_d4
 
     new-instance v9, Ljava/lang/StringBuilder;
 
@@ -2139,13 +2139,13 @@
 
     array-length v9, v9
 
-    if-eqz v9, :cond_db
+    if-eqz v9, :cond_d7
 
     iget-object v9, p0, Lcom/android/settings/TetherSettings;->mWifiRegexs:[Ljava/lang/String;
 
     array-length v9, v9
 
-    if-nez v9, :cond_db
+    if-nez v9, :cond_d7
 
     .line 230
     const-string v9, "%x"
@@ -2243,60 +2243,56 @@
 
     .line 223
     :try_start_c9
-    #Replaced unresolvable odex instruction with a throw
     throw v3
-    #invoke-virtual-quick {v3}, vtable@0xc
-    :try_end_cc
-    .catch Ljava/lang/Exception; {:try_start_c9 .. :try_end_cc} :catch_ce
+    :try_end_ca
+    .catch Ljava/lang/Exception; {:try_start_c9 .. :try_end_ca} :catch_cc
 
     goto/16 :goto_4b
 
     .line 224
-    :catch_ce
+    :catch_cc
     move-exception v9
 
     goto/16 :goto_4b
 
     .line 221
     .end local v2           #ignored:Ljava/lang/Exception;
-    :catchall_d1
+    :catchall_cf
     move-exception v9
 
-    if-eqz v3, :cond_d7
+    if-eqz v3, :cond_d3
 
     .line 223
-    :try_start_d4
-    #Replaced unresolvable odex instruction with a throw
+    :try_start_d2
     throw v3
-    #invoke-virtual-quick {v3}, vtable@0xc
-    :try_end_d7
-    .catch Ljava/lang/Exception; {:try_start_d4 .. :try_end_d7} :catch_10f
+    :try_end_d3
+    .catch Ljava/lang/Exception; {:try_start_d2 .. :try_end_d3} :catch_10b
 
     .line 224
-    :cond_d7
-    :goto_d7
+    :cond_d3
+    :goto_d3
     throw v9
 
     .line 228
     .restart local v7       #url:Ljava/lang/String;
-    :cond_d8
+    :cond_d4
     const-string v9, ""
 
     goto :goto_78
 
     .line 231
-    :cond_db
+    :cond_d7
     iget-object v9, p0, Lcom/android/settings/TetherSettings;->mWifiRegexs:[Ljava/lang/String;
 
     array-length v9, v9
 
-    if-eqz v9, :cond_ee
+    if-eqz v9, :cond_ea
 
     iget-object v9, p0, Lcom/android/settings/TetherSettings;->mUsbRegexs:[Ljava/lang/String;
 
     array-length v9, v9
 
-    if-nez v9, :cond_ee
+    if-nez v9, :cond_ea
 
     .line 232
     const-string v9, "%x"
@@ -2310,7 +2306,7 @@
     goto :goto_8e
 
     .line 236
-    :cond_ee
+    :cond_ea
     const-string v9, "%x"
 
     const-string v10, ""
@@ -2328,10 +2324,10 @@
     .end local v6           #path:Ljava/lang/String;
     .end local v7           #url:Ljava/lang/String;
     .end local v8           #useCountry:Z
-    :cond_f7
+    :cond_f3
     const/4 v9, 0x2
 
-    if-ne p1, v9, :cond_10a
+    if-ne p1, v9, :cond_106
 
     .line 251
     invoke-virtual {p0}, Lcom/android/settings/TetherSettings;->getActivity()Landroid/app/Activity;
@@ -2355,7 +2351,7 @@
 
     .line 256
     .end local v0           #activity:Landroid/app/Activity;
-    :cond_10a
+    :cond_106
     const/4 v9, 0x0
 
     goto :goto_c4
@@ -2366,15 +2362,15 @@
     .restart local v4       #locale:Ljava/util/Locale;
     .restart local v6       #path:Ljava/lang/String;
     .restart local v8       #useCountry:Z
-    :catch_10c
+    :catch_108
     move-exception v9
 
     goto/16 :goto_4b
 
-    :catch_10f
+    :catch_10b
     move-exception v10
 
-    goto :goto_d7
+    goto :goto_d3
 .end method
 
 .method public onPreferenceChange(Landroid/preference/Preference;Ljava/lang/Object;)Z

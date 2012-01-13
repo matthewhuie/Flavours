@@ -1213,7 +1213,7 @@
     :try_start_3
     invoke-direct {p0}, Landroid/media/MiniThumbFile;->miniThumbDataFile()Ljava/io/RandomAccessFile;
     :try_end_6
-    .catchall {:try_start_3 .. :try_end_6} :catchall_7c
+    .catchall {:try_start_3 .. :try_end_6} :catchall_7a
 
     move-result-object v8
 
@@ -1238,42 +1238,40 @@
 
     .line 196
     .local v7, lock:Ljava/nio/channels/FileLock;
-    if-eqz p1, :cond_4d
+    if-eqz p1, :cond_4b
 
     .line 197
     :try_start_10
     array-length v0, p1
     :try_end_11
-    .catchall {:try_start_10 .. :try_end_11} :catchall_75
-    .catch Ljava/io/IOException; {:try_start_10 .. :try_end_11} :catch_55
-    .catch Ljava/lang/RuntimeException; {:try_start_10 .. :try_end_11} :catch_7f
+    .catchall {:try_start_10 .. :try_end_11} :catchall_73
+    .catch Ljava/io/IOException; {:try_start_10 .. :try_end_11} :catch_53
+    .catch Ljava/lang/RuntimeException; {:try_start_10 .. :try_end_11} :catch_7d
 
     const/16 v3, 0x2703
 
-    if-le v0, v3, :cond_1d
+    if-le v0, v3, :cond_1b
 
     .line 221
     if-eqz v7, :cond_9
 
     :try_start_17
-    #Replaced unresolvable odex instruction with a throw
     throw v7
-    #invoke-virtual-quick {v7}, vtable@0x10
-    :try_end_1a
-    .catchall {:try_start_17 .. :try_end_1a} :catchall_7c
-    .catch Ljava/io/IOException; {:try_start_17 .. :try_end_1a} :catch_1b
+    :try_end_18
+    .catchall {:try_start_17 .. :try_end_18} :catchall_7a
+    .catch Ljava/io/IOException; {:try_start_17 .. :try_end_18} :catch_19
 
     goto :goto_9
 
     .line 223
-    :catch_1b
+    :catch_19
     move-exception v0
 
     goto :goto_9
 
     .line 201
-    :cond_1d
-    :try_start_1d
+    :cond_1b
+    :try_start_1b
     iget-object v0, p0, Landroid/media/MiniThumbFile;->mBuffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->clear()Ljava/nio/Buffer;
@@ -1324,36 +1322,36 @@
     iget-object v3, p0, Landroid/media/MiniThumbFile;->mBuffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v0, v3, v1, v2}, Ljava/nio/channels/FileChannel;->write(Ljava/nio/ByteBuffer;J)I
-    :try_end_4d
-    .catchall {:try_start_1d .. :try_end_4d} :catchall_75
-    .catch Ljava/io/IOException; {:try_start_1d .. :try_end_4d} :catch_55
-    .catch Ljava/lang/RuntimeException; {:try_start_1d .. :try_end_4d} :catch_7f
+    :try_end_4b
+    .catchall {:try_start_1b .. :try_end_4b} :catchall_73
+    .catch Ljava/io/IOException; {:try_start_1b .. :try_end_4b} :catch_53
+    .catch Ljava/lang/RuntimeException; {:try_start_1b .. :try_end_4b} :catch_7d
 
     .line 221
-    :cond_4d
+    :cond_4b
     if-eqz v7, :cond_9
 
-    :try_start_4f
+    :try_start_4d
     invoke-virtual {v7}, Ljava/nio/channels/FileLock;->release()V
-    :try_end_52
-    .catchall {:try_start_4f .. :try_end_52} :catchall_7c
-    .catch Ljava/io/IOException; {:try_start_4f .. :try_end_52} :catch_53
+    :try_end_50
+    .catchall {:try_start_4d .. :try_end_50} :catchall_7a
+    .catch Ljava/io/IOException; {:try_start_4d .. :try_end_50} :catch_51
 
     goto :goto_9
 
     .line 223
-    :catch_53
+    :catch_51
     move-exception v0
 
     goto :goto_9
 
     .line 211
-    :catch_55
+    :catch_53
     move-exception v6
 
     .line 212
     .local v6, ex:Ljava/io/IOException;
-    :try_start_56
+    :try_start_54
     const-string v0, "MiniThumbFile"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1384,36 +1382,36 @@
 
     .line 214
     throw v6
-    :try_end_75
-    .catchall {:try_start_56 .. :try_end_75} :catchall_75
+    :try_end_73
+    .catchall {:try_start_54 .. :try_end_73} :catchall_73
 
     .line 220
     .end local v6           #ex:Ljava/io/IOException;
-    :catchall_75
+    :catchall_73
     move-exception v0
 
     .line 221
-    if-eqz v7, :cond_7b
+    if-eqz v7, :cond_79
 
-    :try_start_78
+    :try_start_76
     invoke-virtual {v7}, Ljava/nio/channels/FileLock;->release()V
-    :try_end_7b
-    .catchall {:try_start_78 .. :try_end_7b} :catchall_7c
-    .catch Ljava/io/IOException; {:try_start_78 .. :try_end_7b} :catch_b0
+    :try_end_79
+    .catchall {:try_start_76 .. :try_end_79} :catchall_7a
+    .catch Ljava/io/IOException; {:try_start_76 .. :try_end_79} :catch_ae
 
     .line 225
-    :cond_7b
-    :goto_7b
-    :try_start_7b
+    :cond_79
+    :goto_79
+    :try_start_79
     throw v0
-    :try_end_7c
-    .catchall {:try_start_7b .. :try_end_7c} :catchall_7c
+    :try_end_7a
+    .catchall {:try_start_79 .. :try_end_7a} :catchall_7a
 
     .line 190
     .end local v1           #pos:J
     .end local v7           #lock:Ljava/nio/channels/FileLock;
     .end local v8           #r:Ljava/io/RandomAccessFile;
-    :catchall_7c
+    :catchall_7a
     move-exception v0
 
     monitor-exit p0
@@ -1424,12 +1422,12 @@
     .restart local v1       #pos:J
     .restart local v7       #lock:Ljava/nio/channels/FileLock;
     .restart local v8       #r:Ljava/io/RandomAccessFile;
-    :catch_7f
+    :catch_7d
     move-exception v6
 
     .line 217
     .local v6, ex:Ljava/lang/RuntimeException;
-    :try_start_80
+    :try_start_7e
     const-string v0, "MiniThumbFile"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1465,29 +1463,29 @@
     move-result-object v3
 
     invoke-static {v0, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-    :try_end_a6
-    .catchall {:try_start_80 .. :try_end_a6} :catchall_75
+    :try_end_a4
+    .catchall {:try_start_7e .. :try_end_a4} :catchall_73
 
     .line 221
     if-eqz v7, :cond_9
 
-    :try_start_a8
+    :try_start_a6
     invoke-virtual {v7}, Ljava/nio/channels/FileLock;->release()V
-    :try_end_ab
-    .catchall {:try_start_a8 .. :try_end_ab} :catchall_7c
-    .catch Ljava/io/IOException; {:try_start_a8 .. :try_end_ab} :catch_ad
+    :try_end_a9
+    .catchall {:try_start_a6 .. :try_end_a9} :catchall_7a
+    .catch Ljava/io/IOException; {:try_start_a6 .. :try_end_a9} :catch_ab
 
     goto/16 :goto_9
 
     .line 223
-    :catch_ad
+    :catch_ab
     move-exception v0
 
     goto/16 :goto_9
 
     .end local v6           #ex:Ljava/lang/RuntimeException;
-    :catch_b0
+    :catch_ae
     move-exception v3
 
-    goto :goto_7b
+    goto :goto_79
 .end method

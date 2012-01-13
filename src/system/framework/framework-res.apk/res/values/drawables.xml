@@ -16,6 +16,8 @@
     <item type="drawable" name="screen_background_light_transparent">#80ffffff</item>
     <drawable name="dialog_holo_dark_frame">@drawable/dialog_full_holo_dark</drawable>
     <drawable name="dialog_holo_light_frame">@drawable/dialog_full_holo_light</drawable>
+    <item type="drawable" name="APKTOOL_DUMMY_02b3">false</item>
+    <item type="drawable" name="APKTOOL_DUMMY_055d">false</item>
     <item type="drawable" name="status_bar_closed_default_background">#ff000000</item>
     <item type="drawable" name="status_bar_opened_default_background">#ff000000</item>
     <item type="drawable" name="search_bar_default_color">#ff000000</item>
@@ -25,6 +27,4 @@
     <item type="drawable" name="selected_day_background">#ff0092f4</item>
     <item type="drawable" name="screen_background_holo_light">#fff3f3f3</item>
     <item type="drawable" name="screen_background_holo_dark">#ff000000</item>
-    <item type="drawable" name="APKTOOL_DUMMY_02b3">false</item>
-    <item type="drawable" name="APKTOOL_DUMMY_055d">false</item>
 </resources>

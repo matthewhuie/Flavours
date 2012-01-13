@@ -953,7 +953,7 @@
 
     move-result v8
 
-    if-nez v8, :cond_29
+    if-nez v8, :cond_27
 
     move v8, v9
 
@@ -963,39 +963,37 @@
     .line 421
     iget-boolean v8, p0, Landroid/content/pm/RegisteredServicesCache;->mPersistentServicesFileDidNotExist:Z
     :try_end_1f
-    .catchall {:try_start_e .. :try_end_1f} :catchall_a8
-    .catch Ljava/lang/Exception; {:try_start_e .. :try_end_1f} :catch_96
+    .catchall {:try_start_e .. :try_end_1f} :catchall_a6
+    .catch Ljava/lang/Exception; {:try_start_e .. :try_end_1f} :catch_94
 
-    if-eqz v8, :cond_2b
+    if-eqz v8, :cond_29
 
     .line 453
     if-eqz v2, :cond_c
 
     .line 455
     :try_start_23
-    #Replaced unresolvable odex instruction with a throw
     throw v2
-    #invoke-virtual-quick {v2}, vtable@0xc
-    :try_end_26
-    .catch Ljava/io/IOException; {:try_start_23 .. :try_end_26} :catch_27
+    :try_end_24
+    .catch Ljava/io/IOException; {:try_start_23 .. :try_end_24} :catch_25
 
     goto :goto_c
 
     .line 456
-    :catch_27
+    :catch_25
     move-exception v8
 
     goto :goto_c
 
     .line 420
-    :cond_29
+    :cond_27
     const/4 v8, 0x0
 
     goto :goto_1b
 
     .line 424
-    :cond_2b
-    :try_start_2b
+    :cond_29
+    :try_start_29
     iget-object v8, p0, Landroid/content/pm/RegisteredServicesCache;->mPersistentServicesFile:Lcom/android/internal/os/AtomicFile;
 
     invoke-virtual {v8}, Lcom/android/internal/os/AtomicFile;->openRead()Ljava/io/FileInputStream;
@@ -1020,18 +1018,18 @@
 
     .line 428
     .local v1, eventType:I
-    :goto_3d
-    if-eq v1, v11, :cond_44
+    :goto_3b
+    if-eq v1, v11, :cond_42
 
     .line 429
     invoke-interface {v3}, Lorg/xmlpull/v1/XmlPullParser;->next()I
 
     move-result v1
 
-    goto :goto_3d
+    goto :goto_3b
 
     .line 431
-    :cond_44
+    :cond_42
     invoke-interface {v3}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v5
@@ -1044,7 +1042,7 @@
 
     move-result v8
 
-    if-eqz v8, :cond_72
+    if-eqz v8, :cond_70
 
     .line 433
     invoke-interface {v3}, Lorg/xmlpull/v1/XmlPullParser;->next()I
@@ -1052,14 +1050,14 @@
     move-result v1
 
     .line 435
-    :cond_55
-    if-ne v1, v11, :cond_8f
+    :cond_53
+    if-ne v1, v11, :cond_8d
 
     invoke-interface {v3}, Lorg/xmlpull/v1/XmlPullParser;->getDepth()I
 
     move-result v8
 
-    if-ne v8, v11, :cond_8f
+    if-ne v8, v11, :cond_8d
 
     .line 436
     invoke-interface {v3}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
@@ -1073,48 +1071,48 @@
 
     move-result v8
 
-    if-eqz v8, :cond_8f
+    if-eqz v8, :cond_8d
 
     .line 438
     iget-object v8, p0, Landroid/content/pm/RegisteredServicesCache;->mSerializerAndParser:Landroid/content/pm/XmlSerializerAndParser;
 
     invoke-interface {v8, v3}, Landroid/content/pm/XmlSerializerAndParser;->createFromXml(Lorg/xmlpull/v1/XmlPullParser;)Ljava/lang/Object;
-    :try_end_6f
-    .catchall {:try_start_2b .. :try_end_6f} :catchall_a8
-    .catch Ljava/lang/Exception; {:try_start_2b .. :try_end_6f} :catch_96
+    :try_end_6d
+    .catchall {:try_start_29 .. :try_end_6d} :catchall_a6
+    .catch Ljava/lang/Exception; {:try_start_29 .. :try_end_6d} :catch_94
 
     move-result-object v4
 
     .line 439
     .local v4, service:Ljava/lang/Object;,"TV;"
-    if-nez v4, :cond_7a
+    if-nez v4, :cond_78
 
     .line 453
     .end local v4           #service:Ljava/lang/Object;,"TV;"
-    :cond_72
-    :goto_72
+    :cond_70
+    :goto_70
     if-eqz v2, :cond_c
 
     .line 455
-    :try_start_74
+    :try_start_72
     invoke-virtual {v2}, Ljava/io/FileInputStream;->close()V
-    :try_end_77
-    .catch Ljava/io/IOException; {:try_start_74 .. :try_end_77} :catch_78
+    :try_end_75
+    .catch Ljava/io/IOException; {:try_start_72 .. :try_end_75} :catch_76
 
     goto :goto_c
 
     .line 456
-    :catch_78
+    :catch_76
     move-exception v8
 
     goto :goto_c
 
     .line 442
     .restart local v4       #service:Ljava/lang/Object;,"TV;"
-    :cond_7a
+    :cond_78
     const/4 v8, 0x0
 
-    :try_start_7b
+    :try_start_79
     const-string/jumbo v10, "uid"
 
     invoke-interface {v3, v8, v10}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
@@ -1141,77 +1139,77 @@
     .end local v4           #service:Ljava/lang/Object;,"TV;"
     .end local v6           #uid:I
     .end local v7           #uidString:Ljava/lang/String;
-    :cond_8f
+    :cond_8d
     invoke-interface {v3}, Lorg/xmlpull/v1/XmlPullParser;->next()I
-    :try_end_92
-    .catchall {:try_start_7b .. :try_end_92} :catchall_a8
-    .catch Ljava/lang/Exception; {:try_start_7b .. :try_end_92} :catch_96
+    :try_end_90
+    .catchall {:try_start_79 .. :try_end_90} :catchall_a6
+    .catch Ljava/lang/Exception; {:try_start_79 .. :try_end_90} :catch_94
 
     move-result v1
 
     .line 448
-    if-ne v1, v9, :cond_55
+    if-ne v1, v9, :cond_53
 
-    goto :goto_72
+    goto :goto_70
 
     .line 450
     .end local v1           #eventType:I
     .end local v3           #parser:Lorg/xmlpull/v1/XmlPullParser;
     .end local v5           #tagName:Ljava/lang/String;
-    :catch_96
+    :catch_94
     move-exception v0
 
     .line 451
     .local v0, e:Ljava/lang/Exception;
-    :try_start_97
+    :try_start_95
     const-string v8, "PackageManager"
 
     const-string v9, "Error reading persistent services, starting from scratch"
 
     invoke-static {v8, v9, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-    :try_end_9e
-    .catchall {:try_start_97 .. :try_end_9e} :catchall_a8
+    :try_end_9c
+    .catchall {:try_start_95 .. :try_end_9c} :catchall_a6
 
     .line 453
     if-eqz v2, :cond_c
 
     .line 455
-    :try_start_a0
+    :try_start_9e
     invoke-virtual {v2}, Ljava/io/FileInputStream;->close()V
-    :try_end_a3
-    .catch Ljava/io/IOException; {:try_start_a0 .. :try_end_a3} :catch_a5
+    :try_end_a1
+    .catch Ljava/io/IOException; {:try_start_9e .. :try_end_a1} :catch_a3
 
     goto/16 :goto_c
 
     .line 456
-    :catch_a5
+    :catch_a3
     move-exception v8
 
     goto/16 :goto_c
 
     .line 453
     .end local v0           #e:Ljava/lang/Exception;
-    :catchall_a8
+    :catchall_a6
     move-exception v8
 
-    if-eqz v2, :cond_ae
+    if-eqz v2, :cond_ac
 
     .line 455
-    :try_start_ab
+    :try_start_a9
     invoke-virtual {v2}, Ljava/io/FileInputStream;->close()V
-    :try_end_ae
-    .catch Ljava/io/IOException; {:try_start_ab .. :try_end_ae} :catch_af
+    :try_end_ac
+    .catch Ljava/io/IOException; {:try_start_a9 .. :try_end_ac} :catch_ad
 
     .line 457
-    :cond_ae
-    :goto_ae
+    :cond_ac
+    :goto_ac
     throw v8
 
     .line 456
-    :catch_af
+    :catch_ad
     move-exception v9
 
-    goto :goto_ae
+    goto :goto_ac
 .end method
 
 .method private writePersistentServicesLocked()V

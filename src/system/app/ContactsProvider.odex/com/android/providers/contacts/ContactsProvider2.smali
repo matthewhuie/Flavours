@@ -990,6 +990,12 @@
 
     move-result-object v0
 
+    const-string v1, "is_restricted"
+
+    invoke-virtual {v0, v1}, Lcom/android/providers/contacts/ProjectionMap$Builder;->add(Ljava/lang/String;)Lcom/android/providers/contacts/ProjectionMap$Builder;
+
+    move-result-object v0
+
     invoke-virtual {v0}, Lcom/android/providers/contacts/ProjectionMap$Builder;->build()Lcom/android/providers/contacts/ProjectionMap;
 
     move-result-object v0

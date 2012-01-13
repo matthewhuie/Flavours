@@ -138,6 +138,8 @@
 
 .field public static final INSTALL_NON_MARKET_APPS:Ljava/lang/String; = "install_non_market_apps"
 
+.field public static final KILL_APP_LONGPRESS_BACK:Ljava/lang/String; = "kill_app_longpress_back"
+
 .field public static final LAST_SETUP_SHOWN:Ljava/lang/String; = "last_setup_shown"
 
 .field public static final LOCATION_PROVIDERS_ALLOWED:Ljava/lang/String; = "location_providers_allowed"

@@ -23,6 +23,8 @@
 
 .field private mKeepScreenOn:Landroid/preference/CheckBoxPreference;
 
+.field private mKillAppLongpressBack:Landroid/preference/CheckBoxPreference;
+
 .field private mOkClicked:Z
 
 .field private mOkDialog:Landroid/app/Dialog;
@@ -1189,6 +1191,44 @@
     goto :goto_d
 .end method
 
+.method private writeKillAppLongpressBackOptions()V
+    .registers 4
+
+    .prologue
+    .line 412
+    invoke-virtual {p0}, Lcom/android/settings/DevelopmentSettings;->getActivity()Landroid/app/Activity;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/app/Activity;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v1
+
+    const-string v2, "kill_app_longpress_back"
+
+    iget-object v0, p0, Lcom/android/settings/DevelopmentSettings;->mKillAppLongpressBack:Landroid/preference/CheckBoxPreference;
+
+    invoke-virtual {v0}, Landroid/preference/CheckBoxPreference;->isChecked()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_17
+
+    const/4 v0, 0x1
+
+    :goto_13
+    invoke-static {v1, v2, v0}, Landroid/provider/Settings$Secure;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
+
+    .line 415
+    return-void
+
+    .line 412
+    :cond_17
+    const/4 v0, 0x0
+
+    goto :goto_13
+.end method
+
 .method private writePointerLocationOptions()V
     .registers 4
 
@@ -1608,6 +1648,24 @@
 
     iput-object v3, p0, Lcom/android/settings/DevelopmentSettings;->mShowAllANRs:Landroid/preference/CheckBoxPreference;
 
+    .line 140
+    const-string v3, "kill_app_longpress_back"
+
+    invoke-virtual {p0, v3}, Lcom/android/settings/DevelopmentSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+
+    move-result-object v3
+
+    check-cast v3, Landroid/preference/CheckBoxPreference;
+
+    iput-object v3, p0, Lcom/android/settings/DevelopmentSettings;->mKillAppLongpressBack:Landroid/preference/CheckBoxPreference;
+
+    .line 146
+    const-string v3, "verifier_device_identifier"
+
+    invoke-virtual {p0, v3}, Lcom/android/settings/DevelopmentSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+
+    move-result-object v1
+
     .line 141
     const-string v3, "verifier_device_identifier"
 
@@ -1633,7 +1691,7 @@
 
     .line 144
     .local v2, verifierIndentity:Landroid/content/pm/VerifierDeviceIdentity;
-    if-eqz v2, :cond_e1
+    if-eqz v2, :cond_f1
 
     .line 145
     invoke-virtual {v2}, Landroid/content/pm/VerifierDeviceIdentity;->toString()Ljava/lang/String;
@@ -1643,7 +1701,7 @@
     invoke-virtual {v1, v3}, Landroid/preference/Preference;->setSummary(Ljava/lang/CharSequence;)V
 
     .line 148
-    :cond_e1
+    :cond_f1
     invoke-direct {p0}, Lcom/android/settings/DevelopmentSettings;->removeHdcpOptionsForProduction()V
 
     .line 149
@@ -2048,6 +2106,17 @@
 
     .line 457
     :cond_ea
+    iget-object v0, p0, Lcom/android/settings/DevelopmentSettings;->mKillAppLongpressBack:Landroid/preference/CheckBoxPreference;
+
+    if-ne p2, v0, :cond_f3
+
+    .line 474
+    invoke-direct {p0}, Lcom/android/settings/DevelopmentSettings;->writeKillAppLongpressBackOptions()V
+
+    goto/16 :goto_7
+
+    .line 475
+    :cond_f3
     iget-object v0, p0, Lcom/android/settings/DevelopmentSettings;->mForceHardwareUi:Landroid/preference/CheckBoxPreference;
 
     if-ne p2, v0, :cond_7
