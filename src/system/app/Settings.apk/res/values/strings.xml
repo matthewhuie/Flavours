@@ -1546,7 +1546,7 @@ Since data usage is measured by your phone, and your carrier may account for usa
     <item type="string" name="APKTOOL_DUMMY_05e6">false</item>
     <item type="string" name="APKTOOL_DUMMY_05e7">false</item>
     <string name="flavour_version">Ice cream flavour</string>
-    <string name="flavour_version_default">Elderberry (version 0.5)</string>
+    <string name="flavour_version_default">Fudge Brownie (version 0.6)</string>
     <string name="kill_app_longpress_back">Stop app via long-press</string>
     <string name="kill_app_longpress_back_summary">Kill the foreground application by long-pressing the back button</string>
 </resources>
