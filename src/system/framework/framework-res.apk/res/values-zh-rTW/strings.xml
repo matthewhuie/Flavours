@@ -105,26 +105,26 @@
     <string name="yesterday">昨天</string>
     <string name="today">今天</string>
     <string name="tomorrow">明天</string>
-    <string name="hour_minute_24">%-k:%M</string>
-    <string name="hour_minute_ampm">%p %-l:%M</string>
-    <string name="hour_minute_cap_ampm">%p %-l:%M</string>
+    <string name="hour_minute_24" formatted="false">%-k:%M</string>
+    <string name="hour_minute_ampm" formatted="false">%p %-l:%M</string>
+    <string name="hour_minute_cap_ampm" formatted="false">%p %-l:%M</string>
     <string name="twelve_hour_time_format">a h:mm</string>
     <string name="twenty_four_hour_time_format">H:mm</string>
-    <string name="numeric_date">%Y/%-m/%-e</string>
+    <string name="numeric_date" formatted="false">%Y/%-m/%-e</string>
     <string name="numeric_date_format">yyyy/M/d</string>
     <string name="numeric_date_template" formatted="false">%s/%s/%s</string>
-    <string name="month_day_year">%Y 年 %-m 月 %-e 日</string>
-    <string name="time_of_day">%p %I:%M:%S</string>
-    <string name="date_and_time">%Y/%-m/%-e %p %I:%M:%S</string>
+    <string name="month_day_year" formatted="false">%Y 年 %-m 月 %-e 日</string>
+    <string name="time_of_day" formatted="false">%p %I:%M:%S</string>
+    <string name="date_and_time" formatted="false">%Y/%-m/%-e %p %I:%M:%S</string>
     <string name="date_time">%1$s %2$s</string>
     <string name="time_date">%3$s %1$s</string>
-    <string name="abbrev_month_day_year">%Y/%-m/%-e</string>
-    <string name="month_day">%B %-e 日</string>
+    <string name="abbrev_month_day_year" formatted="false">%Y/%-m/%-e</string>
+    <string name="month_day" formatted="false">%B %-e 日</string>
     <string name="month">%-B</string>
-    <string name="month_year">%Y 年 %B</string>
-    <string name="abbrev_month_day">%b %-e 日</string>
+    <string name="month_year" formatted="false">%Y 年 %B</string>
+    <string name="abbrev_month_day" formatted="false">%b %-e 日</string>
     <string name="abbrev_month">%-b</string>
-    <string name="abbrev_month_year">%Y 年 %b</string>
+    <string name="abbrev_month_year" formatted="false">%Y 年 %b</string>
     <string name="time1_time2">%1$s - %2$s</string>
     <string name="date1_date2">%2$s至 %5$s</string>
     <string name="numeric_md1_md2">%2$s/%3$s 至 %7$s/%8$s</string>
@@ -770,8 +770,8 @@
     <string name="password_keyboard_label_symbol_key">\?123</string>
     <string name="password_keyboard_label_alpha_key">ABC</string>
     <string name="password_keyboard_label_alt_key">ALT</string>
-    <string name="hour_ampm">%-l%P</string>
-    <string name="hour_cap_ampm">%-l%p</string>
+    <string name="hour_ampm" formatted="false">%-l%P</string>
+    <string name="hour_cap_ampm" formatted="false">%-l%p</string>
     <string name="factorytest_failed">出廠測試失敗</string>
     <string name="factorytest_not_system">只有安裝在 /system/app 裡的程式才能支援 FACTORY_TEST 操作。</string>
     <string name="factorytest_no_action">找不到提供 FACTORY_TEST 的程式。</string>

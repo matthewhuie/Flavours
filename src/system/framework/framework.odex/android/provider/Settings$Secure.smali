@@ -323,6 +323,8 @@
 
 .field public static final SHORT_KEYLIGHT_DELAY_MS:Ljava/lang/String; = "short_keylight_delay_ms"
 
+.field public static final SHOW_BATTERY_PERCENTAGE:Ljava/lang/String; = "show_battery_percentage"
+
 .field public static final SMS_OUTGOING_CHECK_INTERVAL_MS:Ljava/lang/String; = "sms_outgoing_check_interval_ms"
 
 .field public static final SMS_OUTGOING_CHECK_MAX_COUNT:Ljava/lang/String; = "sms_outgoing_check_max_count"

@@ -23,6 +23,5 @@
         <CheckBoxPreference android:title="@string/immediately_destroy_activities" android:key="immediately_destroy_activities" android:summary="@string/immediately_destroy_activities_summary" />
         <ListPreference android:persistent="false" android:entries="@array/app_process_limit_entries" android:title="@string/app_process_limit_title" android:key="app_process_limit" android:entryValues="@array/app_process_limit_values" />
         <CheckBoxPreference android:title="@string/show_all_anrs" android:key="show_all_anrs" android:summary="@string/show_all_anrs_summary" />
-        <CheckBoxPreference android:title="@string/kill_app_longpress_back" android:key="kill_app_longpress_back" android:summary="@string/kill_app_longpress_back_summary" />
     </PreferenceCategory>
 </PreferenceScreen>

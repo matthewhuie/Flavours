@@ -24,9 +24,14 @@
     <PreferenceScreen android:title="@string/settings_safetylegal_title" android:key="safetylegal">
         <intent android:action="android.settings.SAFETY" />
     </PreferenceScreen>
+    <PreferenceScreen android:title="@string/flavour_settings" android:key="flavour_settings" android:summary="@string/flavour_version">
+        <CheckBoxPreference android:title="@string/enable_lockscreen_rotation" android:key="enable_lockscreen_rotation" android:summary="@string/enable_lockscreen_rotation_summary" />
+        <CheckBoxPreference android:title="@string/show_battery_percentage" android:key="show_battery_percentage" android:summary="@string/show_battery_percentage_summary" />
+        <CheckBoxPreference android:title="@string/kill_app_longpress_back" android:key="kill_app_longpress_back" android:summary="@string/kill_app_longpress_back_summary" />
+        <Preference android:title="@string/flavour_credit" android:key="flavour_credit" android:summary="@string/flavour_credit_default" style="?android:preferenceInformationStyle" />
+    </PreferenceScreen>
     <Preference android:title="@string/model_number" android:key="device_model" android:summary="@string/device_info_default" style="?android:preferenceInformationStyle" />
     <Preference android:title="@string/firmware_version" android:key="firmware_version" android:summary="@string/device_info_default" style="?android:preferenceInformationStyle" />
-    <Preference android:title="@string/flavour_version" android:key="flavour_version" android:summary="@string/flavour_version_default" style="?android:preferenceInformationStyle" />
     <Preference android:title="@string/baseband_version" android:key="baseband_version" android:summary="@string/device_info_default" style="?android:preferenceInformationStyle" />
     <Preference android:title="@string/kernel_version" android:key="kernel_version" android:summary="@string/device_info_default" style="?android:preferenceInformationStyle" />
     <Preference android:title="@string/build_number" android:key="build_number" android:summary="@string/device_info_default" style="?android:preferenceInformationStyle" />

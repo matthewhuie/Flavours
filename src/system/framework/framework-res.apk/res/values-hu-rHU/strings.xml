@@ -81,26 +81,26 @@
     <string name="yesterday">tegnap</string>
     <string name="today">ma</string>
     <string name="tomorrow">holnap</string>
-    <string name="hour_minute_24">%H:%M</string>
-    <string name="hour_minute_ampm">%p %-l:%M</string>
-    <string name="hour_minute_cap_ampm">%^p %-l:%M</string>
+    <string name="hour_minute_24" formatted="false">%H:%M</string>
+    <string name="hour_minute_ampm" formatted="false">%p %-l:%M</string>
+    <string name="hour_minute_cap_ampm" formatted="false">%^p %-l:%M</string>
     <string name="twelve_hour_time_format">a h:mm</string>
     <string name="twenty_four_hour_time_format">HH:mm</string>
     <string name="numeric_date" formatted="false">%Y.%m.%d.</string>
     <string name="numeric_date_format">yyyy.MM.dd.</string>
     <string name="numeric_date_template" formatted="false">%s.%s.%s.</string>
-    <string name="month_day_year">%Y. %B %-e.</string>
-    <string name="time_of_day">%-k:%M:%S</string>
+    <string name="month_day_year" formatted="false">%Y. %B %-e.</string>
+    <string name="time_of_day" formatted="false">%-k:%M:%S</string>
     <string name="date_and_time" formatted="false">%Y.%m.%d., %-k:%M:%S</string>
     <string name="date_time">%1$s, %2$s</string>
     <string name="time_date">%3$s, %1$s</string>
     <string name="abbrev_month_day_year" formatted="false">%Y.%m.%d.</string>
-    <string name="month_day">%B %-e.</string>
+    <string name="month_day" formatted="false">%B %-e.</string>
     <string name="month">%-B</string>
-    <string name="month_year">%Y. %B</string>
-    <string name="abbrev_month_day">%b %-e.</string>
+    <string name="month_year" formatted="false">%Y. %B</string>
+    <string name="abbrev_month_day" formatted="false">%b %-e.</string>
     <string name="abbrev_month">%-b</string>
-    <string name="abbrev_month_year">%Y. %b</string>
+    <string name="abbrev_month_year" formatted="false">%Y. %b</string>
     <string name="time1_time2">%1$s - %2$s</string>
     <string name="date1_date2">%2$s - %5$s</string>
     <string name="numeric_md1_md2">%2$s.%3$s. - %7$s.%8$s.</string>

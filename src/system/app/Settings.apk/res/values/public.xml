@@ -2434,10 +2434,16 @@
     <public type="string" name="APKTOOL_DUMMY_05e5" id="0x7f0b05e5" />
     <public type="string" name="APKTOOL_DUMMY_05e6" id="0x7f0b05e6" />
     <public type="string" name="APKTOOL_DUMMY_05e7" id="0x7f0b05e7" />
-    <public type="string" name="flavour_version" id="0x7f0b05e8" />
-    <public type="string" name="flavour_version_default" id="0x7f0b05e9" />
+    <public type="string" name="flavour_settings" id="0x7f0b05e8" />
+    <public type="string" name="flavour_version" id="0x7f0b05e9" />
     <public type="string" name="kill_app_longpress_back" id="0x7f0b05ea" />
     <public type="string" name="kill_app_longpress_back_summary" id="0x7f0b05eb" />
+    <public type="string" name="flavour_credit" id="0x7f0b05ec" />
+    <public type="string" name="flavour_credit_default" id="0x7f0b05ed" />
+    <public type="string" name="enable_lockscreen_rotation" id="0x7f0b05ee" />
+    <public type="string" name="enable_lockscreen_rotation_summary" id="0x7f0b05ef" />
+    <public type="string" name="show_battery_percentage" id="0x7f0b05f0" />
+    <public type="string" name="show_battery_percentage_summary" id="0x7f0b05f1" />
     <public type="dimen" name="device_memory_usage_button_width" id="0x7f0c0000" />
     <public type="dimen" name="device_memory_usage_button_height" id="0x7f0c0001" />
     <public type="dimen" name="action_bar_switch_padding" id="0x7f0c0002" />

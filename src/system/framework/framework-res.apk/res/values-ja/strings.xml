@@ -105,26 +105,26 @@
     <string name="yesterday">昨日</string>
     <string name="today">今日</string>
     <string name="tomorrow">明日</string>
-    <string name="hour_minute_24">%-k:%M</string>
-    <string name="hour_minute_ampm">%-l:%M%p</string>
-    <string name="hour_minute_cap_ampm">%-l:%M%^p</string>
+    <string name="hour_minute_24" formatted="false">%-k:%M</string>
+    <string name="hour_minute_ampm" formatted="false">%-l:%M%p</string>
+    <string name="hour_minute_cap_ampm" formatted="false">%-l:%M%^p</string>
     <string name="twelve_hour_time_format">h:mma</string>
     <string name="twenty_four_hour_time_format">H:mm</string>
     <string name="numeric_date" formatted="false">%Y/%m/%d</string>
     <string name="numeric_date_format">yyyy/MM/dd</string>
     <string name="numeric_date_template" formatted="false">%s/%s/%s</string>
-    <string name="month_day_year">%Y年%-m月%-e日</string>
-    <string name="time_of_day">%-k:%M:%S</string>
+    <string name="month_day_year" formatted="false">%Y年%-m月%-e日</string>
+    <string name="time_of_day" formatted="false">%-k:%M:%S</string>
     <string name="date_and_time" formatted="false">%Y/%m/%d %-k:%M:%S</string>
     <string name="date_time">%1$s %2$s</string>
     <string name="time_date">%3$s %1$s</string>
     <string name="abbrev_month_day_year" formatted="false">%Y/%m/%d</string>
-    <string name="month_day">%-m月%-e日</string>
+    <string name="month_day" formatted="false">%-m月%-e日</string>
     <string name="month">%-B</string>
-    <string name="month_year">%Y年%-m月</string>
-    <string name="abbrev_month_day">%-m月%-e日</string>
+    <string name="month_year" formatted="false">%Y年%-m月</string>
+    <string name="abbrev_month_day" formatted="false">%-m月%-e日</string>
     <string name="abbrev_month">%-b</string>
-    <string name="abbrev_month_year">%Y年%-m月</string>
+    <string name="abbrev_month_year" formatted="false">%Y年%-m月</string>
     <string name="time1_time2">%1$s～%2$s</string>
     <string name="date1_date2">%2$s～%5$s</string>
     <string name="numeric_md1_md2">%2$s/%3$s～%7$s/%8$s</string>
@@ -771,8 +771,8 @@
     <string name="password_keyboard_label_symbol_key">\?123</string>
     <string name="password_keyboard_label_alpha_key">ABC</string>
     <string name="password_keyboard_label_alt_key">ALT</string>
-    <string name="hour_ampm">%-l%P</string>
-    <string name="hour_cap_ampm">%-l%p</string>
+    <string name="hour_ampm" formatted="false">%-l%P</string>
+    <string name="hour_cap_ampm" formatted="false">%-l%p</string>
     <string name="factorytest_failed">出荷時試験が失敗</string>
     <string name="factorytest_not_system">FACTORY_TEST操作は、/system/appにインストールされたパッケージのみが対象です。</string>
     <string name="factorytest_no_action">FACTORY_TEST操作を行うパッケージは見つかりませんでした。</string>

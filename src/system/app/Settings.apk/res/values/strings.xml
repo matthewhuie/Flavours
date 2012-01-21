@@ -1545,8 +1545,14 @@ Since data usage is measured by your phone, and your carrier may account for usa
     <item type="string" name="APKTOOL_DUMMY_05e5">false</item>
     <item type="string" name="APKTOOL_DUMMY_05e6">false</item>
     <item type="string" name="APKTOOL_DUMMY_05e7">false</item>
-    <string name="flavour_version">Ice cream flavour</string>
-    <string name="flavour_version_default">Fudge Brownie (version 0.6)</string>
+    <string name="flavour_settings">Flavour settings</string>
+    <string name="flavour_version">Ginger</string>
     <string name="kill_app_longpress_back">Stop app via long-press</string>
     <string name="kill_app_longpress_back_summary">Kill the foreground application by long-pressing the back button</string>
+    <string name="flavour_credit">Flavours</string>
+    <string name="flavour_credit_default">Designed by Matthew Huie</string>
+    <string name="enable_lockscreen_rotation">Lockscreen rotation enabled</string>
+    <string name="enable_lockscreen_rotation_summary">Allow landscape orientations on the lockscreen</string>
+    <string name="show_battery_percentage">Show battery percentage</string>
+    <string name="show_battery_percentage_summary">Show battery percentage on the notification bar</string>
 </resources>

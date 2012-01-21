@@ -105,26 +105,26 @@
     <string name="yesterday">vakar</string>
     <string name="today">šodien</string>
     <string name="tomorrow">rīt</string>
-    <string name="hour_minute_24">%H:%M</string>
-    <string name="hour_minute_ampm">%-l:%M %p</string>
-    <string name="hour_minute_cap_ampm">%-l:%M %^p</string>
+    <string name="hour_minute_24" formatted="false">%H:%M</string>
+    <string name="hour_minute_ampm" formatted="false">%-l:%M %p</string>
+    <string name="hour_minute_cap_ampm" formatted="false">%-l:%M %^p</string>
     <string name="twelve_hour_time_format">h:mm a</string>
     <string name="twenty_four_hour_time_format">HH:mm</string>
     <string name="numeric_date" formatted="false">%d.%m.%Y</string>
     <string name="numeric_date_format">dd.MM.yyyy</string>
     <string name="numeric_date_template" formatted="false">%s.%s.%s</string>
-    <string name="month_day_year">%Y. gada %-e. %B</string>
-    <string name="time_of_day">%H:%M:%S</string>
-    <string name="date_and_time">%H:%M:%S %Y. gada %-e. %b</string>
+    <string name="month_day_year" formatted="false">%Y. gada %-e. %B</string>
+    <string name="time_of_day" formatted="false">%H:%M:%S</string>
+    <string name="date_and_time" formatted="false">%H:%M:%S %Y. gada %-e. %b</string>
     <string name="date_time">%2$s %1$s</string>
     <string name="time_date">%1$s %3$s</string>
-    <string name="abbrev_month_day_year">%Y. gada %-e. %b</string>
-    <string name="month_day">%-e. %B</string>
+    <string name="abbrev_month_day_year" formatted="false">%Y. gada %-e. %b</string>
+    <string name="month_day" formatted="false">%-e. %B</string>
     <string name="month">%-B</string>
-    <string name="month_year">%Y. g. %B</string>
-    <string name="abbrev_month_day">%-e. %b</string>
+    <string name="month_year" formatted="false">%Y. g. %B</string>
+    <string name="abbrev_month_day" formatted="false">%-e. %b</string>
     <string name="abbrev_month">%-b</string>
-    <string name="abbrev_month_year">%Y. g. %b</string>
+    <string name="abbrev_month_year" formatted="false">%Y. g. %b</string>
     <string name="time1_time2">%1$s - %2$s</string>
     <string name="date1_date2">%2$s - %5$s</string>
     <string name="numeric_md1_md2">%3$s.mm–%8$s.mm</string>
@@ -770,8 +770,8 @@ Apmeklējiet vietni "<b>google.com/accounts/recovery</b>.</string>
     <string name="password_keyboard_label_symbol_key">\?123</string>
     <string name="password_keyboard_label_alpha_key">ABC</string>
     <string name="password_keyboard_label_alt_key">ALT</string>
-    <string name="hour_ampm">%-l%P</string>
-    <string name="hour_cap_ampm">%-l%p</string>
+    <string name="hour_ampm" formatted="false">%-l%P</string>
+    <string name="hour_cap_ampm" formatted="false">%-l%p</string>
     <string name="factorytest_failed">Rūpnīcas pārbaude neizdevās</string>
     <string name="factorytest_not_system">Darbība FACTORY_TEST tiek atbalstīta tikai pakotnēm, kas ir instalētas šeit: /system/app.</string>
     <string name="factorytest_no_action">Netika atrasts neviena pakotne, kas nodrošina darbību FACTORY_TEST.</string>

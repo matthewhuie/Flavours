@@ -1469,7 +1469,7 @@
     .line 442
     iget-object v1, p0, Lcom/android/settings/applications/RunningServiceDetails;->mSnippet:Landroid/view/ViewGroup;
 
-    const v2, 0x10805cd
+    const v2, 0x10805ce
 
     invoke-virtual {v1, v2}, Landroid/view/ViewGroup;->setBackgroundResource(I)V
 
